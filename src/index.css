@@ -1,32 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
 @import "tailwindcss";
 
+/* ===========================
+   Global Reset
+=========================== */
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family: "Poppins", sans-serif;
-  background:#F8FAFC;
-  color:#111827;
+
+    font-family:"Inter",sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #f8fafc 0%,
+        #eef4ff 50%,
+        #f1f5f9 100%
+    );
+
+    color:#0f172a;
+
+    min-height:100vh;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
 }
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:9px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#94a3b8;
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#64748b;
+
+}
+
+/* ===========================
+   Links
+=========================== */
 
 a{
-  text-decoration:none;
-  color:inherit;
+
+    text-decoration:none;
+
+    color:inherit;
+
 }
+
+/* ===========================
+   Buttons
+=========================== */
 
 button{
-  cursor:pointer;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+
 }
 
+button:active{
+
+    transform:scale(.97);
+
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
 input,
-button,
-select{
-  font-family:inherit;
+select,
+textarea,
+button{
+
+    font-family:inherit;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+}
+
+/* ===========================
+   Placeholder
+=========================== */
+
+::placeholder{
+
+    color:#94a3b8;
+
+}
+
+/* ===========================
+   Text Selection
+=========================== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* ===========================
+   Card Shadow
+=========================== */
+
+.card-shadow{
+
+    box-shadow:
+
+    0 10px 30px rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   Glass Effect
+=========================== */
+
+.glass{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.3);
+
+}
+
+/* ===========================
+   Hover Animation
+=========================== */
+
+.hover-lift{
+
+    transition:all .3s ease;
+
+}
+
+.hover-lift:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ===========================
+   Fade Animation
+=========================== */
+
+.fade-in{
+
+    animation:fade .4s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   Statistics Cards
+=========================== */
+
+.stats-card{
+
+    border-radius:22px;
+
+    background:white;
+
+    padding:24px;
+
+    box-shadow:
+
+        0 12px 35px rgba(15,23,42,.08);
+
+    transition:.3s;
+
+}
+
+.stats-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+        0 18px 45px rgba(37,99,235,.12);
+
+}
+
+/* ===========================
+   Enterprise Buttons
+=========================== */
+
+.btn-primary{
+
+    background:#2563eb;
+
+    color:white;
+
+    border-radius:14px;
+
+}
+
+.btn-primary:hover{
+
+    background:#1d4ed8;
+
+}
+
+.btn-danger{
+
+    background:#dc2626;
+
+    color:white;
+
+    border-radius:14px;
+
+}
+
+.btn-danger:hover{
+
+    background:#b91c1c;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    body{
+
+        font-size:15px;
+
+    }
+
 }
