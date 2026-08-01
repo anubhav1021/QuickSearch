@@ -113,7 +113,7 @@ function DocumentCard({ doc, refresh }) {
 
     window.open(
 
-      `http://localhost:5000/uploads/${doc.storedName}`,
+      `${import.meta.env.VITE_API_URL}/uploads/${doc.storedName}`,
 
       "_blank"
 
@@ -126,13 +126,9 @@ function DocumentCard({ doc, refresh }) {
     const token = localStorage.getItem("token");
 
     window.open(
-
-      `http://localhost:5000/api/documents/download/${doc.id}?token=${encodeURIComponent(token)}`,
-
-      "_blank"
-
-    );
-
+  `${import.meta.env.VITE_API_URL}/api/documents/download/${doc.id}?token=${encodeURIComponent(token)}`,
+  "_blank"
+);
   };
 
   const removeDocument = async () => {
